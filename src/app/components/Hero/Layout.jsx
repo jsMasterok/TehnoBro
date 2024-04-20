@@ -1,3 +1,7 @@
+"use client";
+
+import { useState } from "react";
+
 import CallBackForm from "@/app/components/Hero/CallBackForm";
 import Header from "@/app/components/Hero/Header";
 import Title from "@/app/components/Hero/Title";
@@ -6,6 +10,8 @@ import Benefits from "@/app/components/Hero/Benefits";
 import CallBackModal from "@/app/components/Modals/CallBackModal";
 
 export default function HeroSection() {
+  const [openModal, setOpenModal] = useState(false);
+
   return (
     <div className="w-full h-screen flex flex-col bg-graphite-black pt-4 pb-8 px-2">
       <Header />
@@ -22,7 +28,10 @@ export default function HeroSection() {
         </div>
         <Benefits />
       </div>
-      <CallBackModal isOpen={false} />
+      <CallBackModal
+        isOpen={openModal}
+        onRequestClose={() => setOpenModal(false)}
+      />
     </div>
   );
 }

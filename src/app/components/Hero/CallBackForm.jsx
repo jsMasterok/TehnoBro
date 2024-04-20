@@ -1,7 +1,14 @@
-import Link from "next/link";
+"use client";
+import { motion } from "framer-motion";
+
 export default function CallBackForm() {
   return (
-    <form
+    <motion.form
+      initial={{ x: -1000 }}
+      animate={{ x: 0 }}
+      transition={{
+        duration: 0.5,
+      }}
       action="POST"
       className="w-full px-8 py-4 bg-gradient-to-br rounded-md flex flex-col from-gradient-from to-gradient-to"
     >
@@ -40,6 +47,6 @@ export default function CallBackForm() {
       >
         Дізнатись ціну
       </button>
-    </form>
+    </motion.form>
   );
 }

@@ -1,10 +1,17 @@
-import React from "react";
+"use client";
+
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="w-full">
+    <motion.header
+      initial={{ y: -1000 }}
+      animate={{ y: 0 }}
+      transition={{ delay: 0.2 }}
+      className="w-full"
+    >
       <div className="w-full mx-auto max-w-7xl flex items-center justify-between">
         <Image src={"/img/LOGO.png"} width={100} height={100} />
         <div className="flex items-center gap-x-8">
@@ -63,6 +70,6 @@ export default function Header() {
           </Link>
         </div>
       </div>
-    </header>
+    </motion.header>
   );
 }

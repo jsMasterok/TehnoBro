@@ -2,7 +2,7 @@
 
 import Modal from "react-modal";
 
-export default function CallBackModal({ isOpen }) {
+export default function CallBackModal({ isOpen, onClose }) {
   const customStyles = {
     content: {
       top: "50%",
@@ -15,7 +15,13 @@ export default function CallBackModal({ isOpen }) {
   };
 
   return (
-    <Modal isOpen={isOpen} style={customStyles}>
+    <Modal
+      isOpen={isOpen}
+      onRequestClose={onClose}
+      shouldCloseOnOverlayClick={true}
+      shouldCloseOnEsc={true}
+      style={customStyles}
+    >
       <div></div>
     </Modal>
   );
