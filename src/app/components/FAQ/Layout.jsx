@@ -32,9 +32,9 @@ export default function Layout() {
   };
 
   return (
-    <div className="w-full h-screen flex flex-col bg-graphite-black pt-4 pb-8 px-2 overflow-hidden">
+    <div className="w-full h-full lg:h-screen flex flex-col bg-graphite-black pt-4 pb-8 px-2 overflow-hidden">
       <div className="w-full h-full max-w-7xl mx-auto flex flex-col justify-around">
-        <h2 className="text-white font-semibold text-4xl text-center inline-flex items-center gap-x-4 w-fit mx-auto">
+        <h2 className="text-white font-semibold text-2xl lg:text-4xl text-center inline-flex items-center gap-x-4 w-fit mx-auto">
           Чому саме ми
           <motion.p
             initial={{ opacity: 0 }}
@@ -47,7 +47,7 @@ export default function Layout() {
             🧐
           </motion.p>
         </h2>
-        <div className="w-full grid grid-cols-2 gap-8">
+        <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-8 mt-4">
           {benefits.map((item, index) => {
             return (
               <motion.div
@@ -58,7 +58,7 @@ export default function Layout() {
                 viewport={{ once: false }}
                 custom={index}
                 key={index}
-                className="w-full p-4 rounded-md border-2 border-peach flex items-center gap-x-2 font-medium text-white text-base justify-center h-24"
+                className="w-full p-4 rounded-md border-2 border-peach flex items-center gap-x-2 font-medium text-white text-base justify-center h-32 lg:h-24"
               >
                 {item.text}
               </motion.div>
@@ -72,7 +72,7 @@ export default function Layout() {
             delay: 0.5,
           }}
           viewport={{ once: false }}
-          className="text-center text-white text-sm font-medium border-2 border-peach rounded-md py-4 px-16"
+          className="text-center text-white text-sm font-medium border-2 border-peach rounded-md py-4 px-4 mt-4 lg:px-16"
         >
           Наша задача зробити процес викупу вашого обладнання максимально
           зручним для вас. Усі технічні питання беремо на себе (Логістика,

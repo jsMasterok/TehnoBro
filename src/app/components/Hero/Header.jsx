@@ -14,9 +14,9 @@ export default function Header() {
     >
       <div className="w-full mx-auto max-w-7xl flex items-center justify-between">
         <Image src={"/img/LOGO.png"} width={100} height={100} />
-        <div className="flex items-center gap-x-8">
-          <span className="text-base font-medium text-peach underline-offset-4 hover:underline flex items-center gap-x-1 cursor-pointer">
-            Як нас знайти
+        <div className="flex items-center gap-x-1 lg:gap-x-8">
+          <span className="text-base hidden lg:flex font-medium text-peach underline-offset-4 hover:underline items-center gap-x-1 cursor-pointer">
+            <span className="hidden lg:block">Як нас знайти</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -35,8 +35,8 @@ export default function Header() {
               />
             </svg>
           </span>
-          <span className="text-base font-medium text-peach underline-offset-4 hover:underline flex items-center gap-x-1 cursor-pointer">
-            Зворотній зв'язок
+          <span className="text-base hidden font-medium text-peach underline-offset-4 hover:underline lg:flex items-center gap-x-1 cursor-pointer">
+            <span className="hidden lg:block">Зворотній зв'язок</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -52,8 +52,7 @@ export default function Header() {
             </svg>
           </span>
           <Link
-            href={""}
-            target="_blank"
+            href={"tel:+380660557776"}
             className="text-base font-medium text-peach underline-offset-4 hover:underline flex items-center gap-x-1 cursor-pointer"
           >
             +38 (066)-055-77-76

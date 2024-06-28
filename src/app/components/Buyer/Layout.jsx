@@ -24,9 +24,9 @@ export default function Layout() {
   ];
 
   return (
-    <div className="w-full h-screen flex flex-col bg-graphite-black pt-4 pb-8 px-2 overflow-hidden">
+    <div className="w-full h-full lg:h-screen flex flex-col bg-graphite-black pt-4 pb-8 px-2 overflow-hidden">
       <div className="w-full h-full max-w-7xl mx-auto flex flex-col justify-around">
-        <h2 className="text-white font-semibold text-4xl text-center inline-flex items-center gap-x-4 w-fit mx-auto">
+        <h2 className="text-white font-semibold text-2xl lg:text-4xl text-center inline-flex items-center gap-x-4 w-fit mx-auto">
           Що ми купуємо{" "}
           <motion.p
             initial={{ opacity: 0 }}
@@ -39,7 +39,7 @@ export default function Layout() {
             🤔
           </motion.p>
         </h2>
-        <div className="w-full grid grid-cols-2 gap-8">
+        <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-8 mt-4">
           {cards.map((card, i) => {
             return (
               <BuyerCard key={i} title={card.title} img={card.img} index={i} />
@@ -53,7 +53,7 @@ export default function Layout() {
             delay: 0.5,
           }}
           viewport={{ once: false }}
-          className="text-center text-white text-sm font-medium border-2 border-peach rounded-md py-4 px-16"
+          className="text-center text-white text-sm font-medium border-2 border-peach rounded-md py-4 px-4 lg:px-16 mt-4"
         >
           Оперативна гуртовна скупка ваших відеокарт або майнінг ферм у зборі.
           Перевірка вашого обладнання у нас в офісі в Києві або приїзд до вас на

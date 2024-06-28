@@ -4,9 +4,9 @@ import Link from "next/link";
 
 export default function Layout() {
   return (
-    <div className="w-full h-screen flex flex-col bg-graphite-black pt-4 pb-8 px-2 overflow-hidden">
+    <div className="w-full h-full lg:h-screen flex flex-col bg-graphite-black pt-4 pb-8 px-2 overflow-hidden">
       <div className="w-full h-full max-w-7xl mx-auto flex flex-col justify-around">
-        <h2 className="text-white font-semibold text-4xl text-center inline-flex items-center gap-x-4 w-fit mx-auto">
+        <h2 className="text-white font-semibold text-2xl lg:text-4xl text-center inline-flex items-center gap-x-1 lg:gap-x-4 w-fit mx-auto">
           Потрібно продати швидше
           <motion.p
             initial={{ opacity: 0 }}
@@ -19,7 +19,7 @@ export default function Layout() {
             😎
           </motion.p>
         </h2>
-        <div className="w-full grid grid-cols-4 gap-x-4">
+        <div className="w-full grid grid-cols-1 lg:grid-cols-4 gap-4 my-4">
           <div className="flex flex-col gap-y-2">
             <h4 className="text-lg font-semibold text-white">Адресса</h4>
             <span className="text-white font-medium text-base">

@@ -46,7 +46,7 @@ export default function Benefits() {
     { title: "Викуп неробочої техніки", img: "/img/icons/Ben4.png" },
   ];
   return (
-    <div className="w-full mx-auto max-w-7xl flex items-center justify-between">
+    <div className="w-full mx-auto max-w-7xl flex flex-col lg:flex-row items-start gap-y-5 lg:items-center py-4 lg:py-4 justify-center lg:justify-between">
       {benefitsList.map((item, index) => {
         return <BenefitsItem title={item.title} img={item.img} index={index} />;
       })}
